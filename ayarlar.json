@@ -1,5 +1,5 @@
 {
-    "token":"",
-    "sahip":"",
-    "prefix":"."
-    }
+  "token": "TOKEN",
+  "prefix": "PREFIX",
+  "sahip": "SAHİP ID"
+}

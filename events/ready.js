@@ -1,17 +1,22 @@
-const chalk = require("chalk");
-const moment = require("moment");
-const Discord = require("discord.js");
-const ayarlar = require("../ayarlar.json");
-
-var prefix = ayarlar.prefix;
+const Discord = require('discord.js');
+const moment = require('moment');
+const chalk = require('chalk');
+const { prefix } = require('../ayarlar.json')
 
 module.exports = client => {
-  console.log(`Komutlar Yüklendi.`);
-  console.log(`(${client.user.username}) Bot Hazır`);
-  client.user.setStatus("idle");
-  client.user.setPresence({
-    activity: { name: "Stain ❤️ Stain" },
-    status: "online"
-  });
-  console.log(`Aktif`);
-};
+  var degisenOynuyor = [
+    
+    "Youtube/NoblesYT",
+    "v12 Boş Altyapı"
+    
+  ]
+  
+  setInterval(function() {
+    var degisenOynuyor1 = degisenOynuyor[Math.floor(Math.random() * (degisenOynuyor.length))]
+    client.user.setActivity(`${degisenOynuyor1}`);
+
+}, 2 * 30000);
+  
+  client.user.setStatus("idle"); //dnd, idle, online, offline
+  
+}
